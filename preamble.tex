@@ -1,0 +1,103 @@
+%!TEX root = ./thesis.tex
+
+% Fonts
+\usepackage{newtxtext,newtxmath}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\addtokomafont{disposition}{\rmfamily}
+
+\usepackage[top=2.54cm,bottom=2.54cm,right=2.54cm,left=3cm,footskip=12pt]{geometry}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage[hidelinks]{hyperref}
+
+% Refs
+\usepackage{biblatex}
+\addbibresource{refs.bib}
+
+%%% HEADERS AND FOOTERS
+\usepackage[automark]{scrlayer-scrpage}
+\clearpairofpagestyles
+\cfoot*{\pagemark}
+\renewcommand*\chapterpagestyle{scrheadings}
+
+\newpairofpagestyles[scrheadings]{toc} {
+\clearpairofpagestyles
+\KOMAoptions{headsepline=true}
+\cfoot*{\pagemark}
+}
+%%% END HEADERS AND FOOTERS
+
+\renewcommand{\maketitle}{
+	\newgeometry{margin=2.54cm}
+	\begin{titlepage}
+		\begin{minipage}{.15\textwidth}
+			\includegraphics[width=\textwidth]{./img/ac-logo.png}
+		\end{minipage}%
+		\begin{minipage}{.7\textwidth}
+			\centering\bfseries\footnotesize
+			{\color{RoyalBlue}Automation and Industrial Informatics}
+			
+			Faculty of Automatic Control and Computers
+			
+			National University of Science and Technology
+			
+			POLITEHNICA Bucharest
+		\end{minipage}%
+		\begin{minipage}{.15\textwidth}
+			\includegraphics[width=\textwidth]{./img/aii-logo.png}
+		\end{minipage}% 
+		\begin{center}	
+			\vspace{2em}
+			
+			\vspace{5em}
+			\LARGE\textbf{BACHELOR THESIS}
+			
+			\vspace{1em}
+			\LARGE\textbf{Integrating Tuya Devices with the ThingsBoard IoT Platform}
+		\end{center}
+		\vspace{12em}
+		\begin{minipage}{.5\textwidth}
+			\large\raggedright
+			Advisor
+			
+			Prof. dr. ing. Radu-Nicolae Pietraru
+		\end{minipage}%
+		\begin{minipage}{.5\textwidth}
+			\large\raggedleft
+			Author
+			
+			Alexandru-Ionuț Bostan
+		\end{minipage}%
+		
+		\vfill
+		\begin{center}
+			\large Bucharest, \textbf{2025}
+		\end{center}
+	\end{titlepage}
+	\restoregeometry
+}
+
+%%% STYLING
+\setlength{\parindent}{0pt}
+\setlength\parskip{\baselineskip}
+\RedeclareSectionCommand[
+style=section,
+beforeskip=0pt,
+afterskip=1pt
+]{chapter}
+
+\RedeclareSectionCommand[
+style=section,
+beforeskip=0.75\baselineskip,
+afterskip=1pt
+]{section}
+
+\setkomafont{chapter}{\Large\bfseries}
+\setkomafont{section}{\large\bfseries}
+\setkomafont{subsection}{\large\bfseries}
+
+\usepackage{setspace}
+\setstretch{1.2}
+%%% END STYLING

@@ -1,0 +1,14 @@
+*
+
+!*/
+
+!/.gitignore
+!/README.md
+!/thesis.tex
+!/thesis.pdf
+!/chapters/*.tex
+
+!/refs.bib
+!/preamble.tex
+
+!/img/*

@@ -1,0 +1,57 @@
+\documentclass[12pt, a4paper]{scrreprt}
+\input{./preamble.tex}
+
+\begin{document}
+\maketitle
+
+\thispagestyle{toc}
+\pagenumbering{roman}
+\tableofcontents
+% Temp
+\newpage
+\pagenumbering{arabic}
+\chapter{Introduction}
+intro \cite{latex2e}
+
+\section{Scope}
+moretxt
+\section{}
+\section{Thesis structure}
+
+\newpage
+\chapter{Background}
+txtxt
+
+\section{Internet of Things (IoT) Ecosystem}
+\section{Tuya Smart}
+
+\chapter{Benefits}
+\section{Repurposing devices}
+\section{Extending product lifespan}
+\section{Privacy}
+
+\newpage
+\chapter{Methodology}
+txtxt
+\section{Custom firmware}
+\section{Bluetooth Low Energy (BLE)}
+\section{Wi-Fi}
+\subsection{MQTT}
+\section{ThingsBoard API}
+
+\newpage
+\chapter{Conclusions}
+
+%\newpage
+%\pagenumbering{arabic}
+%\include{./chapters/introduction.tex}
+
+%\newpage
+%\include{./chapters/idk2.tex}
+%
+\newpage
+\printbibliography[title={References}, heading=bibnumbered]
+
+\newpage
+\chapter{Appendices}
+\end{document}
