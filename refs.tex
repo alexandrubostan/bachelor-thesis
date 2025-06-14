@@ -1,0 +1,20 @@
+\usepackage[
+backend=biber,
+style=numeric,
+sorting=none,
+giveninits=true,
+isbn=false
+]{biblatex}
+
+\renewbibmacro{in:}{}
+
+\DeclareFieldFormat[article,inbook,incollection,inproceedings,patent,thesis,unpublished]{title}{\mkbibquote{#1\isdot}}
+\DeclareFieldFormat{labelnumberwidth}{#1\adddot}
+
+\AtEveryBibitem{
+\ifentrytype{inproceedings}{
+    \clearfield{eventtitle}
+}{}
+}
+
+\addbibresource{refs.bib}

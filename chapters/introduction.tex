@@ -1,0 +1,45 @@
+%!TEX root = ../thesis.tex
+
+\chapter{Introduction}
+
+The prevalence of smart devices in our homes is on the rise, thanks to the convenience and utility that they offer. One crucial aspect that makes these devices so easy to use is the fact that they are connected to the Internet. This interconnectivity is useful, as it allows different devices to communicate together, or send the data that they generate to a central location.
+
+Typically, smart devices are designed to collect environmental or user data through embedded sensors and transmit this information over wireless protocols such as Wi-Fi, Zigbee, or Bluetooth \cite{faludiHowIoTDevices}. These devices often interact with cloud services that make user interaction really easy, through the use of mobile applications and websites. However, the IoT landscape is highly fragmented, with various manufacturers choosing to adopt proprietary platforms rather than open-source ones. This fragmentation hurts interoperability and is detrimental to a cohesive device management system.
+
+Under these circumstances, the ability to integrate devices from different ecosystems becomes a concern, especially for developers and organizations seeking to develop custom IoT solutions. Building a bridge between proprietary smart devices and open-source platforms is a very challenging target.
+
+\section{Scope}
+
+This thesis aims to investigate some methods that can be used to integrate Tuya Smart devices with the ThingsBoard platform. These methods have different implementations, some harder to execute than others. In order to do this successfully, research is required on the architecture of these smart devices. After all, this is the embedded systems field, which means no two different devices have the exact same solution.
+
+ThingsBoard is an open-source IoT platform designed for data collection, device management, and visualization through protocols such as MQTT, CoAP, and HTTP \cite{thethingsboardauthorsWhatThingsBoard}.
+
+The integration of Tuya smart devices with ThingsBoard is non-trivial, as these devices are typically designed to operate within a proprietary cloud-based system. Achieving such integration requires reverse-engineering device communication protocols, or employing intermediary services or firmware modifications. This document is mainly focused on uploading custom firmware by physically connecting to the device or Over-The-Air (OTA).
+
+A fundamental part of this work involves analyzing the architecture of Tuya smart devices, which vary significantly depending on the manufacturer and intended application. Given that these devices function as embedded systems, it is expected that integration strategies are unique to each device.
+
+\section{Description}
+
+This thesis comprises a technical investigation into the communication mechanisms and system architectures of both Tuya devices and the ThingsBoard platform. The aim is to establish a reliable integration path, enabling the ingestion and visualization of telemetry data from Tuya devices within the ThingsBoard environment. The study includes the following key components:
+
+\begin{itemize}
+	\item An overview of the Tuya ecosystem, including device provisioning, cloud services, and developer tools.
+	\item A technical analysis of the ThingsBoard platform, focusing on its extensibility, supported protocols, and data processing model.
+	\item An identification and evaluation of potential integration strategies, including the use of APIs, custom gateways, and firmware-based solutions.
+	\item A practical implementation of one or more integration methods, including system setup, configuration, and experimental validation.
+	\item An assessment of the performance, reliability, and security of the implemented integration pipeline.
+\end{itemize}
+
+The results of this study aim to inform future development efforts in heterogeneous IoT environments, offering insights into how proprietary systems may be incorporated into open-source frameworks for enhanced interoperability and control.
+
+\section{Thesis Structure}
+
+\noindent I have organized this document into five different chapters:
+
+\begin{itemize}
+	\item \textbf{Chapter 1: Introduction}: Introduces the topic, outlines the motivation, objectives, and structure of the thesis.
+	\item \textbf{Chapter 2: Background}: Presents a review of existing literature and relevant technologies, with a focus on Tuya and ThingsBoard systems.
+	\item \textbf{Chapter 3: Benefits}: Describes the internal architectures of Tuya smart devices and the ThingsBoard platform, highlighting integration challenges.
+	\item \textbf{Chapter 4: Methodology}: Details the research approach, experimental setup, and tools employed in the study.
+	\item \textbf{Chapter 5: Conclusions}: Summarizes key findings and suggests directions for future research and development.
+\end{itemize}

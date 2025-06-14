@@ -1,5 +1,6 @@
 \documentclass[12pt, a4paper]{scrreprt}
 \input{./preamble.tex}
+\input{./refs.tex}
 
 \begin{document}
 \maketitle
@@ -7,51 +8,18 @@
 \thispagestyle{toc}
 \pagenumbering{roman}
 \tableofcontents
-% Temp
-\newpage
+
+\clearpage
 \pagenumbering{arabic}
-\chapter{Introduction}
-intro \cite{latex2e}
-
-\section{Scope}
-moretxt
-\section{}
-\section{Thesis structure}
+\include{./chapters/introduction.tex}
+\include{./chapters/background.tex}
+\include{./chapters/benefits.tex}
+\include{./chapters/methodology.tex}
+\include{./chapters/conclusions.tex}
 
 \newpage
-\chapter{Background}
-txtxt
-
-\section{Internet of Things (IoT) Ecosystem}
-\section{Tuya Smart}
-
-\chapter{Benefits}
-\section{Repurposing devices}
-\section{Extending product lifespan}
-\section{Privacy}
-
-\newpage
-\chapter{Methodology}
-txtxt
-\section{Custom firmware}
-\section{Bluetooth Low Energy (BLE)}
-\section{Wi-Fi}
-\subsection{MQTT}
-\section{ThingsBoard API}
-
-\newpage
-\chapter{Conclusions}
-
-%\newpage
-%\pagenumbering{arabic}
-%\include{./chapters/introduction.tex}
-
-%\newpage
-%\include{./chapters/idk2.tex}
-%
-\newpage
+\emergencystretch=1em
 \printbibliography[title={References}, heading=bibnumbered]
 
-\newpage
-\chapter{Appendices}
+\include{./chapters/appendices.tex}
 \end{document}
